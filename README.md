@@ -2,7 +2,7 @@
 
 # Weather App
 
-![App Preview](./src/assets/screenshot.png)
+![App Preview](./src/assets/screenshot.PNG)
 
 > The main objective for this application is to test the ability to use object constructors and to do DOM manipulation.
 
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo](https://sanadwj.github.io/ToDo/)
+[Live Demo](https://sanadwj.github.io/Weather-app/)
 
 
 
@@ -35,7 +35,7 @@ git clone git@github.com:sanadwj/Weather-app.git
 
 ### Deployment
 
-This project has been deployed on Netlify.
+This project has been deployed on Github.
 
 
 ## Author
