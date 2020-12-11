@@ -1,4 +1,5 @@
-const form = (() => {
+const form = () => {
+  const { body } = document;
   const nav = document.createElement('nav');
   const form = document.createElement('form');
   form.setAttribute('class', 'form-group');
@@ -9,7 +10,8 @@ const form = (() => {
 
   form.appendChild(input);
   nav.appendChild(form);
-  return nav;
-})();
+  body.appendChild(nav)
+  return body;
+};
 
 export default form;

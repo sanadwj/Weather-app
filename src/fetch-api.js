@@ -1,10 +1,9 @@
-// fetch('api.openweathermap.org/data/2.5/weather?q=London&appid=f0a0a5cdff8354ea00890abfc36922f3', {
-//   method: 'GET',
-//   mode: 'cors',
-// })
-//   .then(response => console.log(response))
-//   .catch(error => console.log(error));
-const ev = "amman"
+import displayData from './display';
+
+
+
+
+
 
 async function getWeather(value) {
   try {
@@ -14,14 +13,15 @@ async function getWeather(value) {
 
     const result = await response.json();
     const data = result;
-    console.log(data);
-    const { main } = data
-    console.log(main.temp)
 
-   
+    displayData(data);
   } catch (error) {
-    
+    // const input = document.querySelector('.search');
+    // input.value = '';
+    // input.classList.add('error');
+    // input.placeholder = 'Enter a valid city';
   }
 }
 
-getWeather(ev)
+
+export default getWeather;
