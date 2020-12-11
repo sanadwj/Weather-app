@@ -1,7 +1,7 @@
 const form = () => {
   const { body } = document;
   const nav = document.createElement('nav');
-  nav.className = 'flex m-5 align-content-center justify-content-center';
+  nav.className = ' row flex m-5 align-content-center justify-content-between header';
   const form = document.createElement('form');
   form.className = 'form-group flex align-items-center justify-content-center ';
   const input = document.createElement('input');

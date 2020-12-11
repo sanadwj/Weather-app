@@ -5,15 +5,16 @@ import form from './src/form';
 import display from './src/display';
 import appBody from './src/body';
 import images from './src/images';
+import toggle from './src/toggle';
 
-
+const key = 'f0a0a5cdff8354ea00890abfc36922f3';
 form();
+toggle();
 
-
-async function getWeather(value) {
+const getWeather = async (value) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=f0a0a5cdff8354ea00890abfc36922f3&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${key}&units=metric`,
     );
 
     const result = await response.json();
@@ -27,7 +28,7 @@ async function getWeather(value) {
     input.classList.add('error');
     input.placeholder = 'Enter a valid city';
   }
-}
+};
 
 const weatherForm = document.querySelector('.form-group');
 
