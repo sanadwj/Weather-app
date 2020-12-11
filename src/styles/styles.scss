@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.default-img {
+  background: url("../assets/clear_sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.cloudy-img {
+  background: url("../assets/cloudy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.night-img {
+  background: url("../assets/night.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.snow-img {
+  background: url("../assets/rain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.storm-img {
+  background: url("../assets/snow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.rain-img {
+  background: url("../assets/storm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.all-data {
+  -webkit-box-shadow: 5px 5px 15px 5px #000;
+  box-shadow: 5px 5px 15px 5px #000;
+  margin: 0 15em;
+}
+
+.weather-value {
+  font-size: 45px;
+}
+
+.search {
+  background-color: transparent;
+  color: white;
+}

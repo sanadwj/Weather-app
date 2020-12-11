@@ -1,13 +1,13 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './src/styles/styles.scss';
 import form from './src/form';
 import display from './src/display';
 import appBody from './src/body';
+import images from './src/images';
 
-const { body } = document;
 
 form();
-appBody();
 
 
 async function getWeather(value) {
@@ -18,8 +18,9 @@ async function getWeather(value) {
 
     const result = await response.json();
     const data = result;
-      console.log(data)
+
     display(data);
+    images(data);
   } catch (error) {
     const input = document.querySelector('.search');
     input.value = '';
@@ -28,15 +29,16 @@ async function getWeather(value) {
   }
 }
 
-console.log(getWeather('amman'));
-
 const weatherForm = document.querySelector('.form-group');
-const formInput = document.querySelector('.search');
 
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  const formInput = document.querySelector('.search');
   formInput.classList.remove('error');
   formInput.placeholder = 'Enter a city';
   getWeather(formInput.value);
   weatherForm.reset();
 });
+
+getWeather('amman');
+appBody();

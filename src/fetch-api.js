@@ -1,10 +1,6 @@
 import displayData from './display';
 
 
-
-
-
-
 async function getWeather(value) {
   try {
     const response = await fetch(

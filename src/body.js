@@ -1,20 +1,20 @@
 const appBody = () => {
   const { body } = document;
+  body.className = 'flex align-items-center justify-content-center';
 
-  // const time = new Date();
-  // const timeNow = document.createElement('div');
-  // timeNow.className = 'time';
-  // timeNow.innerHTML = `${time.timeNow()}`;
-  // body.appendChild(timeNow);
-
-  const weather = document.createElement('div');
-  body.appendChild(weather);
+  const allData = document.createElement('div');
+  allData.className = 'row align-items-center justify-content-center all-data';
+  body.appendChild(allData);
 
   const canvasIcon = document.createElement('canvas');
-  canvasIcon.setAttribute('id', 'icon2');
+  canvasIcon.setAttribute('id', 'icon');
   canvasIcon.setAttribute('width', '128');
   canvasIcon.setAttribute('height', '128');
-  weather.appendChild(canvasIcon);
+  allData.appendChild(canvasIcon);
+
+  const weather = document.createElement('div');
+  allData.appendChild(weather);
+  weather.className = 'm-5';
 
   const location = document.createElement('div');
   location.className = 'location';
@@ -25,10 +25,12 @@ const appBody = () => {
   weather.appendChild(weatherValue);
 
   const border = document.createElement('div');
-  body.appendChild(border);
+  allData.appendChild(border);
+  border.className = 'border-right h-100 ';
+  allData.appendChild(border);
 
   const weatherDetails = document.createElement('div');
-  body.appendChild(weatherDetails);
+  allData.appendChild(weatherDetails);
 
   const weatherDescription = document.createElement('div');
   weatherDescription.className = 'weather-description';
@@ -50,11 +52,8 @@ const appBody = () => {
   humidity.className = 'humidity';
   weatherDetails.appendChild(humidity);
 
-  body.appendChild(weather);
-  body.appendChild(weatherDetails);
   return body;
 };
-
 
 
 export default appBody;
