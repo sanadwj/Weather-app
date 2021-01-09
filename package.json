@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open chrome",
+    "build": "webpack"
   },
+  "proxy": "http://localhost:4000",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,9 +30,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "css-loader": "^5.0.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "postcss-loader": "^4.1.0",
     "sass-loader": "^10.1.0",
+    "skycons": "^1.0.0",
     "styles-loader": "^2.0.0"
   }
 }
